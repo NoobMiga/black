@@ -384,7 +384,7 @@ class LineGenerator(Visitor[Line]):
                 # ... otherwise, we'll keep the buggy behaviour >.<
                 docstring = normalize_string_prefix(leaf.value)
             prefix = get_string_prefix(docstring)
-            docstring = docstring[len(prefix) :]  # Remove the prefix
+            docstring = docstring[len(prefix):]  # Remove the prefix
             quote_char = docstring[0]
             # A natural way to remove the outer quotes is to do:
             #   docstring = docstring.strip(quote_char)
