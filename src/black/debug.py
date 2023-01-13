@@ -16,7 +16,7 @@ class DebugVisitor(Visitor[T]):
     tree_depth: int = 0
 
     def visit_default(self, node: LN) -> Iterator[T]:
-        indent = " " * (2 * self.tree_depth)
+        indent = "\t" * self.tree_depth
         if isinstance(node, Node):
             _type = type_repr(node.type)
             out(f"{indent}{_type}", fg="yellow")
